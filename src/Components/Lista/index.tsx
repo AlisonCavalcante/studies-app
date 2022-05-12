@@ -1,23 +1,30 @@
 import React from "react";
 
-function Lista(){
-    return (
+function Lista() {
+  const tasks = [
+    {
+      tasks: "React",
+      time: "02:00:00",
+    },
+    {
+      tasks: "Angular",
+      time: "01:00:00",
+    },
+  ];
+
+  return (
     <aside>
-        <h2>Estudos do dia</h2>
-        <ul>
-            <li>
-                <h3>React</h3>
-                <span>02:00:00</span>
-            </li>
-            <li>
-                <h3>Angular</h3>
-                <span>01:30:00</span>
-            </li>
-        </ul>
+      <h2>Estudos do dia</h2>
+      <ul>
+          {tasks.map((item, index) => (
+              <li key={index}>
+                  <h3>{item.tasks}</h3>
+                  <span>{item.time}</span>
+              </li>
+          ))}
+      </ul>
     </aside>
-    ) 
-        
-    
+  );
 }
 
-export default Lista
+export default Lista;
