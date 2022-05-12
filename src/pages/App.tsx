@@ -1,6 +1,6 @@
 import Formulario from "../Components/Formulario";
 import Lista from "../Components/Lista";
-import styles from './styles.module.scss';
+import styles from './App.module.scss';
 
 function App() {
   return (
